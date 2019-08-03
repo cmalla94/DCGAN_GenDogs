@@ -5,13 +5,13 @@
 3. Alternately you can click the link for the kernel in the linke to open in Kaggle and fork it there
 4. If you went with Google Colab, you need to use Kaggle API by running the following code:
  
-# Colab library to upload files to notebook
+## Colab library to upload files to notebook
 `from google.colab import files`
 
-# Install Kaggle library
+## Install Kaggle library
 `!pip install -q kaggle`
 
-# Upload kaggle API key file
+## Upload kaggle API key file
 `uploaded = files.upload()`
 
 `!cp kaggle.json ~/.kaggle/kaggle.json`
@@ -21,7 +21,7 @@
 `!unzip all-dogs.zip`
 `!unzip Annotation.zip`
 
-Then you can the notebook to train the model.
+Then you can run the notebook to train the model.
 
 The Kaggle is more preferable as both resources give you a GPU. 
 
