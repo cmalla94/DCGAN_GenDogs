@@ -1,30 +1,42 @@
 # Deep Convolutional Generative Adversarial Network to Generate Dog Images
 
-1. To train this network, download the DCGAN_GenDogs.ipynb notebook
-2. Open the downloaded notebook in either Google Colab by clicking Upload and select the notebook 
-3. Alternately you can click the link for the kernel in the linke to open in Kaggle and fork it there
-4. If you went with Google Colab, you need to use Kaggle API by running the following code:
- 
-## Colab library to upload files to notebook
+## Instructions
+
+1. To train this network, download the [DCGAN_GenDogs.ipynb](DCGAN_GenDogs.ipynb) notebook.
+2. You can either: 
+    * Open the downloaded notebook in [Google Colab](https://colab.research.google.com/) by clicking `Upload` and selecting the notebook.
+    * Alternately, click the link for the [kernel](https://www.kaggle.com/jesucristo/gan-introduction) in the link to open in [Kaggle](https://kaggle.com) and fork it there. (Recommended)
+
+_Note:_ Both Resources do provide access to a GPU
+
+## Google Colab Setup
+
+If you chose to use Google Colab, you need to setup the Kaggle API. The following commands need to be executed within the notebook to before use:
+
+### Import Google Colab Library to upload files to the Notebook: 
 `from google.colab import files`
 
-## Install Kaggle library
+### Install Kaggle library
 `!pip install -q kaggle`
 
-## Upload kaggle API key file
+### Upload Kaggle API key file
+
 `uploaded = files.upload()`
 
-`!cp kaggle.json ~/.kaggle/kaggle.json`
+### Setup the environment
 
-`!kaggle competitions download -c generative-dog-images`
+```
+!cp kaggle.json ~/.kaggle/kaggle.json
 
-`!unzip all-dogs.zip`
-`!unzip Annotation.zip`
+!kaggle competitions download -c generative-dog-images
 
-Then you can run the notebook to train the model.
+!unzip all-dogs.zip
 
-The Kaggle is more preferable as both resources give you a GPU. 
+!unzip Annotation.zip
+```
 
-The dataset wasn't able to upload to GitHub due to size restriction. 
+## Additional Information
 
+After installing the necessary libraries and setting up the environment, you can run the notebook to train the model.
 
+_Note:_ The dataset is not uploaded to GitHub because of the size restriction. 
